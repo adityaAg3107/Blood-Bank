@@ -12,7 +12,7 @@ const ProtectedRoute = ({ children }) => { // children shows  the components get
     try {
       const { data } = await API.get("/auth/current-user");
       if (data?.success) {
-        dispatch(getCurrentUser(data));
+        dispatch(getCurrentUser(data));  //getcurrentUser from actions redux
       }
     } catch (error) {
       localStorage.clear();
